@@ -1,54 +1,183 @@
-/*
-Error: Invalid CSS after "    background": expected ";", was ": url(../img/he..."
-        on line 14 of style.scss
+/**************************************************
+GENERAL
+**************************************************/
+body {
+  font-family: "Open Sans", sans-serif;
+  background: url(../img/header.jpg) repeat center center fixed;
+  background-size: cover; }
 
-9: GENERAL
-10: **************************************************\/
-11: 
-12: body {
-13:     font-family: $primary-font
-14:     background: url(../img/header.jpg) repeat center center fixed;
-15:     background-size: cover;
-16: }
-17: 
-18: a {
-19:     text-decoration: none;
+a {
+  text-decoration: none;
+  color: black; }
 
-Backtrace:
-style.scss:14
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:1179:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:1115:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:1110:in `tok!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:775:in `block in try_declaration'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:1155:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:1155:in `rethrow'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:780:in `try_declaration'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:709:in `declaration_or_ruleset'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:674:in `block_child'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:663:in `block_contents'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:655:in `block'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:647:in `ruleset'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:673:in `block_child'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:666:in `block_contents'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:123:in `stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:39:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/engine.rb:403:in `_to_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/engine.rb:378:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/engine.rb:295:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:471:in `on_file_changed'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:328:in `block in watch'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/vendor/listen/lib/listen/listener.rb:252:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"    background\": expected \";\", was \": url(../img/he...\"\A         on line 14 of style.scss\A \A 9: GENERAL\A 10: **************************************************/\A 11: \A 12: body {\A 13:     font-family: $primary-font\A 14:     background: url(../img/header.jpg) repeat center center fixed;\A 15:     background-size: cover;\A 16: }\A 17: \A 18: a {\A 19:     text-decoration: none;"; }
+img {
+  max-width: 100%; }
+
+h1, h2 {
+  margin: 0;
+  font-family: "Lato", sans-serif; }
+
+#wrapper {
+  margin: 0 auto;
+  max-width: 940px; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+div.row {
+  padding: 2%; }
+
+/**************************************************
+HEADING
+**************************************************/
+#main-header {
+  padding: 0;
+  background: url(../img/header.jpg) center;
+  background-size: cover; }
+  #main-header h1 {
+    padding: 0;
+    font-size: 4em;
+    font-weight: 900;
+    -webkit-text-stroke: 1px #b8466c;
+    text-shadow: 3px 3px 0 #b8466c, -1px -1px 0 #b8466c, 1px -1px 0 #b8466c, -1px 1px 0 #b8466c, 1px 1px 0 #b8466c; }
+
+/**************************************************
+NAVIGATION
+**************************************************/
+nav {
+  padding: 0;
+  text-align: center;
+  background: #f26e41; }
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: .8em; }
+  nav li {
+    display: inline-block;
+    padding: 2.5% 7% 2.5%; }
+
+/**************************************************
+MAIN
+**************************************************/
+main {
+  padding: 0; }
+
+/**************************************************
+WELCOME SECTION
+**************************************************/
+#welcome {
+  margin: 3% 2% 0;
+  width: 96%; }
+  #welcome h1 {
+    margin: 0;
+    padding: 2%;
+    font-size: 1.75em;
+    background: #598b2e; }
+  #welcome p {
+    margin: 1% 0 0;
+    padding: 0 3%;
+    line-height: 1.8; }
+
+/**************************************************
+ARTICLES
+**************************************************/
+.article-header {
+  padding: 2.5%;
+  background: #f26f72; }
+  .article-header h1, .article-header h2 {
+    margin: 0;
+    padding: .25%; }
+    .article-header h1 .h1, .article-header h2 .h1 {
+      font-size: 1.75em; }
+    .article-header h1 .h2, .article-header h2 .h2 {
+      font-size: .75em;
+      font-family: "Open Sans", sans-serif; }
+  .article-header p {
+    margin: 1% 0 0;
+    padding: 0 3%;
+    line-height: 1.8; }
+
+/**************************************************
+FOOTER
+**************************************************/
+footer,
+footer p {
+  margin: 0;
+  padding: 0;
+  text-align: center; }
+
+/**************************************************
+COLORS
+**************************************************/
+header h1,
+header h2,
+nav li a,
+main,
+#welcome h1,
+article h1,
+article h2 {
+  color: white; }
+
+#wrapper,
+#welcome,
+#welcome p,
+article,
+article p,
+footer {
+  background: white; }
+
+p {
+  color: black; }
+
+/**************************************************
+COLOR MIX
+**************************************************/
+#color-mix {
+  background: #e6664a; }
+
+/**************************************************
+Responsive Styles
+**************************************************/
+@media screen and (min-width: 481px) and (max-width: 659px) {
+  nav li {
+    display: inline-block;
+    padding: 1.5% 7% 1.5%;
+    font-size: 1.25em; }
+
+  #welcome {
+    margin-top: 2.5%;
+    width: 96%; } }
+@media screen and (min-width: 660px) {
+  nav {
+    text-align: right; }
+
+  nav li {
+    display: inline-block;
+    padding: 1% 2.5% 1% 3%;
+    font-size: 1.25em; }
+
+  #welcome {
+    margin-top: 2.5%;
+    width: 96%; }
+
+  div.row {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto; }
+
+  div[class^="col-"] {
+    display: inline-block;
+    float: left;
+    width: 46%;
+    padding: 2%; }
+
+  article {
+    margin-bottom: 5%; } }
+
+/*# sourceMappingURL=style.css.map */

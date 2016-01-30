@@ -1,16 +1,21 @@
 // Sass Variables
 $main-header: #b8466c; // Main heading text color
+$nav-background: #f26e41;  // Nav background color
+$welcome-background: #8bc758; // Welcome background
 $central-backgrounds: white; // Background color of main areas
 $body-text-color: black; // Color of main text areas
 $primary-font: 'Open Sans', sans-serif; // Font for the primary elements
 $heading-font: 'Lato', sans-serif; // Font for the headings
+$weight: 20;
+$color-mix: mix($main-header, $nav-background, 20%);
+$darken-welcome: darken($welcome-background, 20%);
 
 /**************************************************
 GENERAL
 **************************************************/
 
 body {
-    font-family: $primary-font
+    font-family: $primary-font;
     background: url(../img/header.jpg) repeat center center fixed;
     background-size: cover;
 }
@@ -24,10 +29,9 @@ img {
     max-width: 100%;
 }
 
-h1,
-h2 {
+h1, h2 {
     margin: 0;
-    font-family: $heading-font
+    font-family: $heading-font;
 }
 
 #wrapper {
@@ -57,14 +61,15 @@ HEADING
     padding: 0;
     background: url(../img/header.jpg) center;
     background-size: cover;
-}
 
-#main-header h1 {
-    padding: 0;
-    font-size: 5em;
-    font-weight: 900;
-    -webkit-text-stroke: 1px #b8466c;
-    text-shadow: 3px 3px 0 $main-header, -1px -1px 0 $main-header, 1px -1px 0 $main-header, -1px 1px 0 $main-header, 1px 1px 0 $main-header;
+
+    h1 {
+        padding: 0;
+        font-size: 4em;
+        font-weight: 900;
+        -webkit-text-stroke: 1px #b8466c;
+        text-shadow: 3px 3px 0 $main-header, -1px -1px 0 $main-header, 1px -1px 0 $main-header, -1px 1px 0 $main-header, 1px 1px 0 $main-header;
+    }
 }
 
 
@@ -75,19 +80,19 @@ NAVIGATION
 nav {
     padding: 0;
     text-align: center;
-    background: #f26e41;
-}
+    background: $nav-background;
 
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: .8em;
+    }
 
-nav li {
-    display: inline-block;
-    padding: 2.5% 7% 2.5%;
-    font-size: 1.25em;
+    li {
+        display: inline-block;
+        padding: 2.5% 7% 2.5%;
+    }
 }
 
 
@@ -107,19 +112,20 @@ WELCOME SECTION
 #welcome {
     margin: 3% 2% 0;
     width: 96%;
-}
 
-#welcome h1 {
-    margin: 0;
-    padding: 2%;
-    font-size: 1.75em;
-    background: #8bc758;
-}
 
-#welcome p {
-    margin: 1% 0 0;
-    padding: 0 3%;
-    line-height: 1.8;
+    h1 {
+        margin: 0;
+        padding: 2%;
+        font-size: 1.75em;
+        background: $darken-welcome;
+    }
+
+    p {
+        margin: 1% 0 0;
+        padding: 0 3%;
+        line-height: 1.8;
+    }
 }
 
 
@@ -130,27 +136,28 @@ ARTICLES
 .article-header {
     padding: 2.5%;
     background: #f26f72;
-}
 
-.article-header h1,
-.article-header h2 {
-    margin: 0;
-    padding: .25%;
-}
 
-.article-header h1 {
-    font-size: 1.75em;
-}
+    h1, h2 {
+        margin: 0;
+        padding: .25%;
 
-.article-header h2 {
-    font-size: .75em;
-    font-family: $primary-font
-}
 
-article p {
-    margin: 1% 0 0;
-    padding: 0 3%;
-    line-height: 1.8;
+        .h1 {
+            font-size: 1.75em;
+        }
+
+        .h2 {
+            font-size: .75em;
+            font-family: $primary-font;
+        }
+    }
+
+    p {
+        margin: 1% 0 0;
+        padding: 0 3%;
+        line-height: 1.8;
+    }
 }
 
 
@@ -191,6 +198,15 @@ footer {
 
 p {
     color: $body-text-color;
+}
+
+
+/**************************************************
+COLOR MIX
+**************************************************/
+
+#color-mix {
+    background: $color-mix;
 }
 
 
