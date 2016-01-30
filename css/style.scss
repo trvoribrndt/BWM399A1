@@ -9,6 +9,7 @@ $heading-font: 'Lato', sans-serif; // Font for the headings
 $weight: 20;
 $color-mix: mix($main-header, $nav-background, 20%);
 $darken-welcome: darken($welcome-background, 20%);
+$sass-math: 3%; // Just creating a number to use for Sass math
 
 // Sass extend
 %inlineblock {
@@ -106,6 +107,11 @@ nav {
             @include li(0); // Sets padding to 0 (using a mixin)
             font-weight: 900;
         }
+
+             .special-math {
+                @include li(5% - $sass-math); // Doing some math
+                font-weight: 900;
+            }
 }
 
 

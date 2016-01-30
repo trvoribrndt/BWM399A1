@@ -1,4 +1,4 @@
-nav .special {
+nav .special, nav .special-math {
   display: inline-block; }
 
 #main-header h1 {
@@ -65,6 +65,9 @@ nav {
     font-size: .8em; }
   nav .special {
     padding: 0;
+    font-weight: 900; }
+  nav .special-math {
+    padding: 2%;
     font-weight: 900; }
 
 /**************************************************
