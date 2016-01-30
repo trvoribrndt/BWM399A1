@@ -1,3 +1,9 @@
+nav .special {
+  display: inline-block; }
+
+#main-header h1 {
+  text-shadow: 3px 3px 0 #b8466c, -1px -1px 0 #b8466c, 1px -1px 0 #b8466c, -1px 1px 0 #b8466c, 1px 1px 0 #b8466c; }
+
 /**************************************************
 GENERAL
 **************************************************/
@@ -43,8 +49,7 @@ HEADING
     padding: 0;
     font-size: 4em;
     font-weight: 900;
-    -webkit-text-stroke: 1px #b8466c;
-    text-shadow: 3px 3px 0 #b8466c, -1px -1px 0 #b8466c, 1px -1px 0 #b8466c, -1px 1px 0 #b8466c, 1px 1px 0 #b8466c; }
+    -webkit-text-stroke: 1px #b8466c; }
 
 /**************************************************
 NAVIGATION
@@ -58,9 +63,9 @@ nav {
     padding: 0;
     list-style: none;
     font-size: .8em; }
-  nav li {
-    display: inline-block;
-    padding: 2.5% 7% 2.5%; }
+  nav .special {
+    padding: 0;
+    font-weight: 900; }
 
 /**************************************************
 MAIN
