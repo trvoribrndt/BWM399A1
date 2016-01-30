@@ -1,0 +1,240 @@
+// Sass Variables
+$main-header: #b8466c; // Main heading text color
+$central-backgrounds: white; // Background color of main areas
+$body-text-color: black; // Color of main text areas
+$primary-font: 'Open Sans', sans-serif; // Font for the primary elements
+$heading-font: 'Lato', sans-serif; // Font for the headings
+
+/**************************************************
+GENERAL
+**************************************************/
+
+body {
+    font-family: $primary-font
+    background: url(../img/header.jpg) repeat center center fixed;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2 {
+    margin: 0;
+    font-family: $heading-font
+}
+
+#wrapper {
+    margin: 0 auto;
+    max-width: 940px;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+div.row {
+    padding: 2%;
+}
+
+
+/**************************************************
+HEADING
+**************************************************/
+
+#main-header {
+    padding: 0;
+    background: url(../img/header.jpg) center;
+    background-size: cover;
+}
+
+#main-header h1 {
+    padding: 0;
+    font-size: 5em;
+    font-weight: 900;
+    -webkit-text-stroke: 1px #b8466c;
+    text-shadow: 3px 3px 0 $main-header, -1px -1px 0 $main-header, 1px -1px 0 $main-header, -1px 1px 0 $main-header, 1px 1px 0 $main-header;
+}
+
+
+/**************************************************
+NAVIGATION
+**************************************************/
+
+nav {
+    padding: 0;
+    text-align: center;
+    background: #f26e41;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    padding: 2.5% 7% 2.5%;
+    font-size: 1.25em;
+}
+
+
+/**************************************************
+MAIN
+**************************************************/
+
+main {
+    padding: 0;
+}
+
+
+/**************************************************
+WELCOME SECTION
+**************************************************/
+
+#welcome {
+    margin: 3% 2% 0;
+    width: 96%;
+}
+
+#welcome h1 {
+    margin: 0;
+    padding: 2%;
+    font-size: 1.75em;
+    background: #8bc758;
+}
+
+#welcome p {
+    margin: 1% 0 0;
+    padding: 0 3%;
+    line-height: 1.8;
+}
+
+
+/**************************************************
+ARTICLES
+**************************************************/
+
+.article-header {
+    padding: 2.5%;
+    background: #f26f72;
+}
+
+.article-header h1,
+.article-header h2 {
+    margin: 0;
+    padding: .25%;
+}
+
+.article-header h1 {
+    font-size: 1.75em;
+}
+
+.article-header h2 {
+    font-size: .75em;
+    font-family: $primary-font
+}
+
+article p {
+    margin: 1% 0 0;
+    padding: 0 3%;
+    line-height: 1.8;
+}
+
+
+/**************************************************
+FOOTER
+**************************************************/
+
+footer,
+footer p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+/**************************************************
+COLORS
+**************************************************/
+
+header h1,
+header h2,
+nav li a,
+main,
+#welcome h1,
+article h1,
+article h2 {
+    color: $central-backgrounds;
+}
+
+#wrapper,
+#welcome,
+#welcome p,
+article,
+article p,
+footer {
+    background: $central-backgrounds;
+}
+
+p {
+    color: $body-text-color;
+}
+
+
+/**************************************************
+Responsive Styles
+**************************************************/
+
+@media screen and (min-width: 481px) and (max-width: 659px) {
+    nav li {
+        display: inline-block;
+        padding: 1.5% 7% 1.5%;
+        font-size: 1.25em;
+    }
+    #welcome {
+        margin-top: 2.5%;
+        width: 96%;
+    }
+}
+
+@media screen and (min-width: 660px) {
+    nav {
+        text-align: right;
+    }
+    nav li {
+        display: inline-block;
+        padding: 1% 2.5% 1% 3%;
+        font-size: 1.25em;
+    }
+    #welcome {
+        margin-top: 2.5%;
+        width: 96%;
+    }
+    div.row {
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+    }
+    div[class^="col-"] {
+        display: inline-block;
+        float: left;
+        width: 46%;
+        padding: 2%;
+    }
+    article {
+        margin-bottom: 5%;
+    }
+}
